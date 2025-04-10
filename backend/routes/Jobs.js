@@ -4,7 +4,7 @@ const Job = require("../models/Job");
 
 // POST: Add new job
 router.post("/", async (req, res) => {
-    console.log("📨 POST /api/jobs reached:", req.body); // Debug log
+    console.log("📨 POST /api/jobs reached:", req.body); 
     try {
         const newJob = new Job(req.body);
         const savedJob = await newJob.save();
@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
-
+    // UPDATE: Update a job
 router.patch("/:id", async (req, res) => {
     try {
         const updated = await Job.findByIdAndUpdate(req.params.id, req.body, { new: true });
