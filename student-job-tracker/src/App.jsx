@@ -1,5 +1,5 @@
-import JobForm from './Componenets/JobForm';
-import JobList from './Componenets/JobList';
+import JobForm from './components/JobForm';
+import JobList from './components/JobList';
 import { useState } from 'react';
 
 function App() {
