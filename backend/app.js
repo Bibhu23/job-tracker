@@ -12,6 +12,6 @@ mongoose.connect(process.env.MONGO_URI)
     .catch((err) => console.error("❌ MongoDB Connection Error:", err.message));
 
 // Routes
-app.use("/api/jobs", require("./routes/jobs"));
+app.use("/api/jobs", require("./routes/Jobs"));
 
 module.exports = app;
