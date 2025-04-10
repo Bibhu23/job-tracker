@@ -25,7 +25,6 @@ export default function JobForm({ onJobAdded }) {
             await API.post('', form);
             onJobAdded();
 
-            // Set custom alert message based on status
             let message = '';
             switch (form.status) {
                 case 'Applied':
@@ -47,10 +46,8 @@ export default function JobForm({ onJobAdded }) {
             setAlertMessage(message);
             setShowAlert(true);
 
-            // Clear form
             setForm({ company: '', role: '', status: 'Applied', appliedDate: '', link: '' });
 
-            // Hide alert after 3 seconds
             setTimeout(() => setShowAlert(false), 3000);
         } catch (err) {
             console.error("❌ Error posting job:", err);
