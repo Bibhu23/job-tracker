@@ -1,6 +1,6 @@
+import { useState } from 'react';
 import JobForm from './components/JobForm';
 import JobList from './components/JobList';
-import { useState } from 'react';
 
 function App() {
   const [refresh, setRefresh] = useState(false);
