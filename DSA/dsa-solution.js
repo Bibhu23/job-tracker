@@ -24,6 +24,5 @@ function countStatus(applications) {
     return frequency;
 }
 
-// Run the function and log output
 const result = countStatus(jobApplications);
 console.log("✅ Status Frequency:", result);
